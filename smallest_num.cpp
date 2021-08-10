@@ -1,15 +1,10 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-        int zeros(int k)
+int zeros(int temp)
         {
-            int temp=k;
-            int p=5;
             int count=0;
-            while(p<=temp)
+            while(temp)
             {
-             count=count+ (temp/p);
-             p=p*5;
+             count=count+ (temp/5);
+             temp=temp/5;
             }
             return count;
         }
@@ -36,10 +31,3 @@ using namespace std;
             }
             return low;
         }
-int main()
-{
-    int n;
-    cin>>n;
-
-    cout<<findNum(n);
-}       
